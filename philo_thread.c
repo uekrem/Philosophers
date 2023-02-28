@@ -4,7 +4,7 @@ void	ft_sort_print(t_philo *pt_philo, char *str)
 {
 	pthread_mutex_lock(&pt_philo->list->mtx_print);
 	if (ft_death_checker(pt_philo))		
-		printf("%dms %d %s", ft_clock() - pt_philo->list->begin_time, pt_philo->id + 1, str);
+		printf("%lums %d %s", ft_clock() - pt_philo->list->begin_time, pt_philo->id + 1, str);
 	pthread_mutex_unlock(&pt_philo->list->mtx_print);
 }
 

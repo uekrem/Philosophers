@@ -64,6 +64,12 @@ int	main(int argc, char **argv)
 	int		i;
 
 	i = -1;
+	if (ft_arg_sign(argv, argc))
+		return (0);
+	if (ft_arg_letter(argv, argc))
+		return (0);
+	if (ft_int_rang(argv, argc))
+		return (0);
 	if (argc == 5 || argc == 6)
 	{
 		list = ft_check_argv(argv, argc);
@@ -74,5 +80,4 @@ int	main(int argc, char **argv)
 		while (++i < list->number_of_philosophers)
 			pthread_join(philo[i].th_philo, NULL);
 	}
-	return (0);
 }

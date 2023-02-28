@@ -34,7 +34,7 @@ typedef struct s_philo
     t_list          *list;
 }   t_philo;
 
-int             ft_atoi(const char *nptr);
+long	        ft_atoi(char *str);
 void            ft_thread_creat(t_philo *philo);
 int             ft_death_eat(t_philo *philo);
 unsigned long   ft_clock();
@@ -44,5 +44,8 @@ void	        ft_which_usleep(t_philo *pt_philo, int which);
 void            ft_sort_print(t_philo *pt_philo, char *str);
 int	            ft_death_time_main(t_philo *pt_philo);
 int	            ft_death_eat_mutex_check(t_philo *pt_philo);
+int             ft_arg_letter(char **str, int argc);
+int             ft_int_rang(char **str, int argc);
+int             ft_arg_sign(char **str, int argc);
 
 #endif
