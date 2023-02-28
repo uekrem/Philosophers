@@ -46,6 +46,5 @@ int	            ft_death_time_main(t_philo *pt_philo);
 int	            ft_death_eat_mutex_check(t_philo *pt_philo);
 int             ft_arg_letter(char **str, int argc);
 int             ft_int_rang(char **str, int argc);
-int             ft_arg_sign(char **str, int argc);
 
 #endif

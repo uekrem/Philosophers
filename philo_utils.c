@@ -42,20 +42,6 @@ int ft_arg_letter(char **str, int argc)
 	return (0);
 }
 
-int ft_arg_sign(char **str, int argc)
-{
-	int	i;
-	int	j;
-
-	i = 0;
-	while (++i < argc)
-	{
-		if (str[i][0] == '-')
-			return (1);
-	}
-	return (0);
-}
-
 int ft_int_rang(char **str, int argc)
 {
 	int		i;
