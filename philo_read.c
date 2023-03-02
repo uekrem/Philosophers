@@ -1,6 +1,6 @@
 #include "philo.h"
 
-int	is_dead(t_philo *pt_philo)
+int	ft_death_check(t_philo *pt_philo)
 {
 	pthread_mutex_lock(&pt_philo->list->mtx_death);
 	if (pt_philo->list->death_num == 1)

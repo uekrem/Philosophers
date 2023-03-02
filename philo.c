@@ -53,7 +53,6 @@ t_list	*ft_check_argv(char **str, int argc)
 	else
 		list->must_eat = -42;
 	list->death_num = 0;
-	list->flag_eat = -42;
 	return (list);
 }
 

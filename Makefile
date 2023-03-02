@@ -1,4 +1,3 @@
-
 NAME        := philo
 CC        := gcc
 FLAGS    := -Wall -Wextra -Werror -fsanitize=thread -g
@@ -10,31 +9,23 @@ SRCS        :=      philo_read.c \
 						  philo_time.c \
 						  philo_utils.c \
 						
+OBJS = $(SRCS:.c=.o)
 
-OBJS        := $(SRCS:.c=.o)
+RM		    := rm -rf
+
+all:		$(NAME)
+
+$(NAME): $(OBJS)
+			$(CC) $(FLAGS) $(OBJS) -o $(NAME)
 
 .c.o:
-	${CC} ${FLAGS} -c $< -o ${<:.c=.o}
-
-
-RM		    := rm -f
-
-${NAME}:	${OBJS}
-			${CC} ${FLAGS} -o ${NAME} ${OBJS}
-
-
-all:		${NAME}
-
-bonus:		all
+	$(CC) $(FLAGS) -c $<
 
 clean:
-			@ ${RM} *.o */*.o */*/*.o
+			@ $(RM) ./*.o
 
-fclean:		clean
-			@ ${RM} ${NAME}
+fclean: clean
+			@ $(RM) $(NAME)
 
 re:			fclean all
-
 .PHONY:		all clean fclean re
-
-
