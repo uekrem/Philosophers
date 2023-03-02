@@ -1,5 +1,20 @@
 #include "philo.h"
 
+void	ft_finish(t_philo *philo)
+{
+	int	i;
+
+	i = -1;
+	while (++i < philo->list->number_of_philosophers)
+		pthread_mutex_destroy(&philo->list->fork[i]);
+	pthread_mutex_destroy(&philo->list->mtx_death);
+	pthread_mutex_destroy(&philo->list->mtx_eat);
+	pthread_mutex_destroy(&philo->list->mtx_print);
+	free(philo->list->fork);
+	free(philo->list);
+	free(philo);
+}
+
 void	ft_fork_assign(t_philo *philo, t_list *list)
 {
 	int	i;
@@ -79,5 +94,7 @@ int	main(int argc, char **argv)
 		ft_thread_creat(philo);
 		while (++i < list->number_of_philosophers)
 			pthread_join(philo[i].th_philo, NULL);
+		ft_finish(philo);
 	}
+	return (0);
 }
