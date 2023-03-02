@@ -38,6 +38,8 @@ int ft_arg_letter(char **str, int argc)
 		while (str[i][++j])
 			if (!(str[i][j] >= '0' && str[i][j] <= '9'))
 				return (1);
+		if (!str[i][0])
+			return (1);
 	}
 	return (0);
 }
