@@ -39,12 +39,15 @@ void            ft_thread_creat(t_philo *philo);
 int             ft_death_eat(t_philo *philo);
 unsigned long   ft_clock();
 int             ft_diff_time(unsigned long last_time);
-int	            ft_death_checker(t_philo *pt_philo);
 void	        ft_which_usleep(t_philo *pt_philo, int which);
-void            ft_sort_print(t_philo *pt_philo, char *str);
-int	            ft_death_time_main(t_philo *pt_philo);
-int	            ft_death_eat_mutex_check(t_philo *pt_philo);
-int             ft_arg_letter(char **str, int argc);
-int             ft_int_rang(char **str, int argc);
+
+int	check_all_eat(t_philo *philo);
+void	assign_dead_value(t_philo *philo);
+int	check_if_dead(t_philo *philo);
+int	is_dead(t_philo *pt_philo);
+int ft_int_rang(char **str, int argc);
+int ft_arg_letter(char **str, int argc);
+int	is_dead(t_philo *pt_philo);
+void	ft_sort_print(t_philo *pt_philo, char *str);
 
 #endif

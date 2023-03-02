@@ -5,7 +5,8 @@ void	ft_which_usleep(t_philo *pt_philo, int which)
 	unsigned long	counter_time;
 
 	counter_time = ft_clock();
-	while ((ft_clock() - counter_time) < which)
+	(void)pt_philo;
+	while ((ft_clock() - counter_time) < (unsigned long)which)
 		usleep(100);
 }
 
