@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   philo_utils.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hekrem <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/03 13:20:49 by hekrem            #+#    #+#             */
+/*   Updated: 2023/03/03 13:20:50 by hekrem           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "philo.h"
 
 long	ft_atoi(char *str)
@@ -26,7 +38,7 @@ long	ft_atoi(char *str)
 	return (res * sign);
 }
 
-int ft_arg_letter(char **str, int argc)
+int	ft_arg_letter(char **str, int argc)
 {
 	int	i;
 	int	j;
@@ -44,7 +56,7 @@ int ft_arg_letter(char **str, int argc)
 	return (0);
 }
 
-int ft_int_rang(char **str, int argc)
+int	ft_int_rang(char **str, int argc)
 {
 	int		i;
 	long	temp;

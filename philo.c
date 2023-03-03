@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   philo.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hekrem <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/03 13:20:56 by hekrem            #+#    #+#             */
+/*   Updated: 2023/03/03 13:20:57 by hekrem           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "philo.h"
 
 void	ft_finish(t_philo *philo)
@@ -79,7 +91,7 @@ int	main(int argc, char **argv)
 
 	i = -1;
 	if (argc > 1)
-		if (ft_atoi(argv[1]) == 0) 
+		if (ft_atoi(argv[1]) == 0)
 			return (0);
 	if (ft_arg_letter(argv, argc))
 		return (0);

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   philo_write.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hekrem <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/03 13:21:24 by hekrem            #+#    #+#             */
+/*   Updated: 2023/03/03 13:21:25 by hekrem           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "philo.h"
 
 int	ft_death_write(t_philo *philo)
@@ -12,7 +24,8 @@ int	ft_death_write(t_philo *philo)
 		{
 			ft_death_change(philo);
 			pthread_mutex_unlock(&philo->list->mtx_eat);
-			printf("%lums %d %s", ft_clock() - philo->list->begin_time, philo[i].id + 1, "dead\n");
+			printf("%lums %d %s", ft_clock() - philo->list->begin_time,
+				philo[i].id + 1, "dead\n");
 			return (1);
 		}
 	}
